@@ -6,26 +6,100 @@
   <title>kiss vlog (ဖားကန့်)</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
-    body{background:#121212;color:#fff;min-height:100vh;padding:40px 20px;}
+    body{
+      background: linear-gradient(135deg, #0f0f23, #1a1a3e, #2d1b4e);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #fff;
+    }
     .container{max-width:400px;margin:0 auto;text-align:center;}
-    .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:15px;}
-    h1{font-size:22px;margin-bottom:5px;}
-    .bio{color:#aaa;margin-bottom:30px;}
-    .link{display:block;background:#1f1f1f;color:#fff;text-decoration:none;padding:15px;border-radius:12px;margin-bottom:12px;transition:0.2s;}
-    .link:hover{background:#333;transform:scale(1.02);}
+    .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:3px solid #ffd700;box-shadow:0 0 25px #ffd70066;}
+    h1{font-size:26px;margin-bottom:8px;color:#ffd700;}
+    .bio{color:#ddd;margin-bottom:35px;line-height:1.7;}
+
+    /* ========== ခလုတ် ၁ - တောက်ပလှုပ်ရှားမှု ========== */
+    .link-1{
+      display:block;background:linear-gradient(90deg, #ffd700, #ff9500);color:#000;
+      text-decoration:none;padding:16px;border-radius:14px;margin-bottom:14px;font-weight:bold;
+      transition:all 0.4s ease;
+      animation: glowPulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes glowPulse {
+      from{box-shadow:0 0 5px #ffd700;}
+      to{box-shadow:0 0 20px #ffd700, 0 0 35px #ff9500;}
+    }
+    .link-1:hover{transform:scale(1.05);}
+
+    /* ========== ခလုတ် ၂ - ဖန်သား/အလင်းဖြတ်သန်းမှု ========== */
+    .link-2{
+      display:block;background:rgba(255,255,255,0.08);color:#fff;
+      text-decoration:none;padding:16px;border-radius:14px;margin-bottom:14px;
+      border:1px solid rgba(255,255,255,0.15);backdrop-filter:blur(10px);
+      position:relative;overflow:hidden;transition:all 0.3s ease;
+    }
+    .link-2::before{
+      content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition:left 0.5s ease;
+    }
+    .link-2:hover::before{left:100%;}
+    .link-2:hover{border-color:#4ecdc4;background:rgba(78,205,196,0.1);}
+
+    /* ========== ခလုတ် ၃ - အနားစည်းလှုပ်ရှားမှု ========== */
+    .link-3{
+      display:block;background:transparent;color:#fff;
+      text-decoration:none;padding:16px;border-radius:14px;margin-bottom:14px;
+      border:2px solid #a855f7;position:relative;z-index:1;transition:all 0.3s ease;
+    }
+    .link-3::after{
+      content:"";position:absolute;inset:0;background:#a855f7;transform:scale(0);border-radius:12px;z-index:-1;transition:transform 0.3s ease;
+    }
+    .link-3:hover{color:#fff;}
+    .link-3:hover::after{transform:scale(1);}
+
+    /* ========== ခလုတ် ၄ - အောက်ကိုမြှောက်တက်မှု ========== */
+    .link-4{
+      display:block;background:#1e1e2f;color:#fff;
+      text-decoration:none;padding:16px;border-radius:14px;margin-bottom:14px;
+      border:1px solid #333;transition:all 0.3s ease;
+      box-shadow:0 4px 0 #0f0f1a;
+    }
+    .link-4:hover{transform:translateY(-4px);box-shadow:0 8px 0 #ffd700;background:#2a2a3f;}
+
+    /* ========== ခလုတ် ၅ - ရောင်စုံဖြတ်သန်းမှု ========== */
+    .link-5{
+      display:block;background:linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);background-size:300% 100%;
+      color:#fff;text-decoration:none;padding:16px;border-radius:14px;margin-bottom:14px;
+      animation: gradientMove 4s ease infinite;font-weight:bold;
+    }
+    @keyframes gradientMove {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+    .link-5:hover{background-size:400% 100%;}
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://via.placeholder.com/120" class="avatar" alt="ပရိုဖိုင်">
-    <h1>kiss vlog (ဖားကန့်)</h1>
-    <p class="bio">ကိုယ်လမ်းကိုယ်လျှောက်နေတာ ဆိုးချင်းဆိုးမယ် ကောင်းချင်းကောင်းမယ် ✨</p>
+    <img src="ပုံလင့်ခ်ဒီမှာထည့်" class="avatar" alt="ပရိုဖိုင်">
+    <h1>✨ kiss vlog (ဖားကန့်) ✨</h1>
+    <p class="bio">ကိုယ်လမ်းကိုယ်လျှောက်နေတာ 🚶‍♂️<br>ဆိုးချင်းဆိုးမယ်၊ ကောင်းချင်းကောင်းမယ် ✨</p>
 
-    <a href="https://tiktok.com/@kissvloghk" class="link">🎬 TikTok ကိုယ့်စာမျက်နှာ</a>
-    <a href="#" class="link">🛒 TikTok Shop Affiliate</a>
-    <a href="#" class="link">📺 YouTube (လာမယ့်)</a>
-    <a href="#" class="link">💬 Telegram အဖွဲ့</a>
+    <!-- ၁။ တောက်ပလှုပ်ရှား → အဓိကလင့်ခ်အတွက် -->
+    <a href="https://tiktok.com/@kissvloghk" class="link-1">🎬 TikTok ကိုယ့်စာမျက်နှာ</a>
+
+    <!-- ၂။ ဖန်သားအလင်းဖြတ် → သာမန်လင့်ခ်အတွက် -->
+    <a href="#" class="link-2">🛒 TikTok Shop Affiliate</a>
+
+    <!-- ၃။ အနားစည်းဝင်ထွက် → အထူးအကြောင်းအရာအတွက် -->
+    <a href="#" class="link-3">📸 ဓာတ်ပုံပြခန်း</a>
+
+    <!-- ၄။ မြှောက်တက်မှု → ဆက်သွယ်ရန်အတွက် -->
+    <a href="#" class="link-4">📍 သွားခဲ့တဲ့နေရာများ</a>
+
+    <!-- ၅။ ရောင်စုံဖြတ်သန်း → အသစ်/အထူးကြေညာချက်အတွက် -->
+    <a href="#" class="link-5">💬 Telegram အဖွဲ့</a>
   </div>
 </body>
-                                               </html>
-                                               
+</html>
