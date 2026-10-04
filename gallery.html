@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📸 ဓာတ်ပုံပြခန်း | kiss vlog</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      background: linear-gradient(135deg, #0f0f23, #1a1a3e);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    .container{max-width:450px;margin:0 auto;}
+    .back{
+      display:inline-block;color:#ffd700;text-decoration:none;
+      margin-bottom:25px;
+    }
+    h1{font-size:24px;margin-bottom:25px;color:#ffd700;text-align:center;}
+    .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .photo-item img{
+      width:100%;height:150px;object-fit:cover;border-radius:10px;
+      cursor:pointer;transition:transform 0.3s;
+    }
+    .photo-item img:hover{transform:scale(1.05);}
+    .photo-item p{font-size:13px;color:#ccc;margin-top:6px;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← ပင်မစာမျက်နှာသို့</a>
+    <h1>📸 ဓာတ်ပုံပြခန်း</h1>
+
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="ပုံလင့်ခ်" alt="ပုံ">
+        <p>နေဝင်ချိန် လှပစွာ</p>
+      </div>
+      <div class="photo-item">
+        <img src="ပုံလင့်ခ်" alt="ပုံ">
+        <p>တောင်တန်းများ</p>
+      </div>
+      <div class="photo-item">
+        <img src="ပုံလင့်ခ်" alt="ပုံ">
+        <p>သဘာဝရှုခင်း</p>
+      </div>
+      <div class="photo-item">
+        <img src="ပုံလင့်ခ်" alt="ပုံ">
+        <p>ဖားကန့်အလှ</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
